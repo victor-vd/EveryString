@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url(Assets/Fonts/SourceCodePro-VariableFont_wght.ttf) format(truetype);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffaf00;
+    background-color: #1e1e3c;
+    margin: 0px;
+}
+
+.navbar {
+    min-height: 48px;
+    max-height: 64px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: #141428;
+}
+
+.navbar .links {
+    margin: 0px 0px 0px 24px;
+    display: flex;
+    align-self: center;
+}
+
+.navbar .links a {
+    margin: 20px 24px 20px 0px;
+    text-decoration: none;
+    color: #ffaf00;
+}
+
+.navbar img {
+    height: 52px;
+    margin: 6px 6px 6px 16px;
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        height: 48px;
+    }
+    
+    .navbar .links {
+        margin: 0px 0px 0px 20px;
+        display: flex;
+    }
+    
+    .navbar .links a {
+        margin: 16px 20px 16px 0px;
+    }
+    
+    .navbar img {
+        height: 36px;
+        margin: 6px 6px 6px 16px;
+    } 
+}
