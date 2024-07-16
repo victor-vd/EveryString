@@ -3,6 +3,7 @@
     src: url(Assets/Fonts/SourceCodePro-VariableFont_wght.ttf) format(truetype);
 }
 
+/* Global style*/
 body {
     font-family: 'Source Code Pro', monospace;
     font-size: 24px;
@@ -12,6 +13,13 @@ body {
     margin: 0px;
 }
 
+@media screen and (max-width: 690px) {
+    body {
+        font-size: 16px;
+    }
+}    
+
+/* Navigation bar style*/
 .navbar {
     min-height: 48px;
     max-height: 64px;
@@ -38,7 +46,7 @@ body {
     margin: 6px 6px 6px 16px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 690px) {
     body {
         font-size: 16px;
     }
@@ -60,4 +68,117 @@ body {
         height: 36px;
         margin: 6px 6px 6px 16px;
     } 
+}
+
+/* Text box style*/
+.textBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 64px auto;
+    height: fit-content;
+}    
+.textBoxes .textBoxInput {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffaf00;
+    text-align: left;
+    background-color: #323264;
+    border: inset;
+    margin: 24px 16px 24px 64px;
+    min-height: 300px;
+    width: 90%;
+    max-width: 500px;
+    padding: 16px;
+    box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+    border: 5px inset #ffaf00;   
+    resize: none;
+}    
+.textBoxes .textBoxInput:focus-visible {
+    outline: none;
+}
+.textBoxes .textBoxOutput {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffaf00;
+    text-align: left;
+    background-color: #323264;
+    border: inset;
+    margin: 24px 64px 24px 16px;
+    min-height: 300px;
+    width: 90%;
+    max-width: 500px;
+    padding: 16px;
+    box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+    border: 5px inset #ffaf00;   
+    resize: none;
+}    
+.textBoxes .textBoxOutput:focus-visible {
+    outline: none;
+}
+
+@media screen and (max-width: 690px) {
+    .textBoxes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 16px auto;
+        width: 80%;
+    }    
+    .textBoxes .textBoxInput {
+        margin: 16px;
+        min-height: 200px;
+        width: 100%;
+    }    
+    .textBoxes .textBoxOutput {
+        margin: 16px;
+        min-height: 200px;
+        width: 100%;
+    }    
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #ffaf00;
+    inherits: false;
+}
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #ff7700;
+    inherits: false;
+}
+
+/* Submit button style*/
+#buttonSubmit {
+    background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
+    transition: --myColor1 1s, --myColor2 1s;
+    font-size: 24px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    border: none;
+    box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    color: #323264;
+    justify-content: center;
+    margin: 64px auto;
+    height: 64px;
+    width: 128px;
+}    
+#buttonSubmit:hover {
+    --myColor1: #ff9900;
+    --myColor2: #ff6213;
+    transition: --myColor1 0.4s, --myColor2 0.4s;
+}    
+
+@media screen and (max-width: 690px) {
+    #buttonSubmit {
+        font-size: 20px;
+        margin: 32px auto;
+        height: 48px;
+        width: 96px;
+    }
 }
