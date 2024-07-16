@@ -1,6 +1,6 @@
-const TEXT_BOX_INPUT = document.getElementsByClassName("textBoxInput")[0];
-const TEXT_BOX_OUTPUT = document.getElementsByClassName("textBoxOutput")[0];
-const SUBMIT_BUTTON = document.getElementById("buttonSubmit");
+const TEXT_BOX_INPUT = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
+const TEXT_BOX_OUTPUT = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
+const SUBMIT_BUTTON = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
 let userText = "";
 let outputText = "";
 
