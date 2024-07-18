@@ -1,7 +1,15 @@
-const TEXT_BOX_INPUT = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
-const TEXT_BOX_OUTPUT = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
-const SUBMIT_BUTTON = document.getElementById("TextCaptilizer").document.getElementById("textBoxInput");
-document.getElementById("toLowerCase");
-document.getElementById("toUpperCase");
-document.getElementById("toFirstLetter");
-document.getElementById("toParagraph");
+/*
+
+let toLowerCase = TO_LOWER_CASE.checked;
+let toUpperCase = TO_UPPER_CASE.checked;
+let toFirstLetter = TO_FIRST_LETTER.checked;
+let toParagraph = TO_PARAGRAPH.checked;
+
+document.getElementsByName("checkboxCaps").on('change', function(){
+    toLowerCase = TO_LOWER_CASE.checked;
+    toUpperCase = TO_UPPER_CASE.checked;
+    toFirstLetter = TO_FIRST_LETTER.checked;
+    toParagraph = TO_PARAGRAPH.checked;
+    console.log(toLowerCase, toUpperCase, toFirstLetter, toParagraph);
+});
+*/
