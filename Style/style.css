@@ -127,6 +127,7 @@ body {
     }    
 }
 
+/* Check inputs style*/
 .checkInputs {
     text-align: center;
     display: flex;

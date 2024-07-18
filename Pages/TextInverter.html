@@ -9,14 +9,14 @@
 <body>
     <nav class="navbar"></nav>
     <div class="header"></div>
-    <div class="textBoxes" id="TextInverter">
-        <textarea type="text" id="textBoxInput" autofocus></textarea>
+    <div class="textBoxes">
+        <textarea type="text" autofocus oninput="updateTextInput(value)"></textarea>
         <textarea readonly id="textBoxOutput"></textarea>
     </div>
     <div class="footer">
 
     </div>
-    <script src="../JavaScript/TextInverter.js"></script>
+    <script src="../JavaScript/TextManipulation.js"></script>
     <script src="../JavaScript/ElementInject.js"></script>
 </body>
 </html>
