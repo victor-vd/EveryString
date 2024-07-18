@@ -10,7 +10,7 @@
     <nav class="navbar"></nav>
     <div class="header"></div>
     <div class="textBoxes">
-        <textarea type="text" autofocus oninput="updateTextInput(value)"></textarea>
+        <textarea id="textBoxInput" oninput="updateTextInput.getInvertedText(value)" autofocus></textarea>
         <textarea readonly id="textBoxOutput"></textarea>
     </div>
     <div class="footer">

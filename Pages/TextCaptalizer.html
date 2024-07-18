@@ -10,30 +10,30 @@
     <nav class="navbar"></nav>
     <div class="header"></div>
     <div class="textBoxes">
-        <textarea id="textBoxInput" autofocus></textarea>
+        <textarea id="textBoxInput" oninput="updateTextInput.getCaptalizedText(value)" autofocus></textarea>
         <textarea readonly id="textBoxOutput"></textarea>
     </div>
     <div class="checkInputs">
         <label class="toLowerCase">
-            <input id="toLowerCase" type="radio"  name="checkboxCaps">
+            <input id="toLowerCase"  type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
             <span>×</span><span>toLowerCase</span>
         </label>
         <label class="toUpperCase">
-            <input id="toUpperCase" type="radio" name="checkboxCaps">
+            <input id="toUpperCase" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
             <span>×</span><span>toUpperCase</span>
         </label>
         <label class="toFirstLetter">
-            <input id="toFirstLetter" type="radio" name="checkboxCaps">
+            <input id="toFirstLetter" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
             <span>×</span><span>toFirstLetter</span>
        </label>
         <label class="toParagraph">
-            <input id="toParagraph" type="radio" name="checkboxCaps">
+            <input id="toParagraph" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
             <span>×</span><span>toParagraph</span>
         </label>
     </div>
 
     <div class="footer"></div>
-    <input type="button" id="buttonSubmit" value="Submit"/>
+    <input type="button" onclick="buttonSubmitClick()" id="buttonSubmit" value="Submit"/>
     <script src="../JavaScript/TextManipulation.js"></script>
     <script src="../JavaScript/ElementInject.js"></script>
 </body>
