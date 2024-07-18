@@ -1,6 +1,17 @@
 @font-face {
     font-family: 'Source Code Pro';
-    src: url(Assets/Fonts/SourceCodePro-VariableFont_wght.ttf) format(truetype);
+    src: url(../Assets/Fonts/SourceCodePro-VariableFont_wght.ttf) format('ttf');
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #ffaf00;
+    inherits: false;
+}
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #ff7700;
+    inherits: false;
 }
 
 /* Global style*/
@@ -27,23 +38,21 @@ body {
     justify-content: left;
     align-items: flex-start;
     background-color: #141428;
-}
-
-.navbar .links {
-    margin: 0px 0px 0px 24px;
-    display: flex;
-    align-self: center;
-}
-
-.navbar .links a {
-    margin: 20px 24px 20px 0px;
-    text-decoration: none;
-    color: #ffaf00;
-}
-
-.navbar img {
-    height: 52px;
-    margin: 6px 6px 6px 16px;
+    
+    .links {
+        margin: 0px 0px 0px 24px;
+        display: flex;
+        align-self: center;
+        a {
+            margin: 20px 24px 20px 0px;
+            text-decoration: none;
+            color: #ffaf00;
+        }
+    }
+    img {
+        height: 52px;
+        margin: 6px 6px 6px 16px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -53,21 +62,19 @@ body {
 
     .navbar {
         height: 48px;
+
+        .links {
+            margin: 0px 0px 0px 20px;
+            display: flex;
+            a {
+                margin: 16px 20px 16px 0px;
+            }
+        }
+        img {
+            height: 36px;
+            margin: 6px 6px 6px 16px;
+        } 
     }
-    
-    .navbar .links {
-        margin: 0px 0px 0px 20px;
-        display: flex;
-    }
-    
-    .navbar .links a {
-        margin: 16px 20px 16px 0px;
-    }
-    
-    .navbar img {
-        height: 36px;
-        margin: 6px 6px 6px 16px;
-    } 
 }
 
 /* Text box style*/
@@ -77,34 +84,29 @@ body {
     justify-content: center;
     margin: 32px auto 0 auto;
     height: fit-content;
-}    
-.textBoxes textarea {
-    font-family: inherit;
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffaf00;
-    text-align: left;
-    background-color: #323264;
-    border: inset;
-    min-height: 300px;
-    width: 90%;
-    max-width: 500px;
-    padding: 16px;
-    box-shadow: 3px 3px 5px 3px rgba(0,17,51);
-    border: 5px inset #ffaf00;   
-    resize: none;
-}
-.textBoxes #textBoxInput {
-    margin: 24px 16px 24px 64px;
-}    
-.textBoxes textarea:focus-visible {
-    outline: none;
-}
-.textBoxes #textBoxOutput {
-    margin: 24px 64px 24px 16px;
-}    
-.textBoxes textarea:focus-visible {
-    outline: none;
+    
+    textarea {
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffaf00;
+        text-align: left;
+        background-color: #323264;
+        border: inset;
+        min-height: 300px;
+        width: 90%;
+        max-width: 500px;
+        padding: 16px;
+        box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+        border: 5px inset #ffaf00;   
+        resize: none;
+        &:focus-visible {
+            outline: none;
+            border-color: #ff7700;
+        }
+    }
+    #textBoxInput { margin: 24px 16px 24px 64px; }    
+    #textBoxOutput { margin: 24px 64px 24px 16px; }    
 }
 
 @media screen and (max-width: 720px) {
@@ -135,105 +137,85 @@ body {
     justify-content: center; 
     margin: 8px;
     font-size: 20px;
-}
-.checkInputs label {
-    margin: auto auto;
-}
-.checkInputs input {
-    appearance: none;
-    background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
-    transition: --myColor1 1s, --myColor2 1s;
-    font-size: 24px;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 900;
-    border: none;
-    box-shadow: 3px 3px 3px 2px rgba(0,17,51);
-    border-radius: 32px;
-    color: #323264;
-    margin: 8px auto;
-    height: 32px;
-    width: 64px;
-}
-.checkInputs input:checked {
-    background-color: #ff7700;
-}
-label {
-    height: 48px;
-}
-label span:first-of-type {
-    position: relative;
-    left: -51.5px;
-    top: -15.5px;
-    font-size: 32px;
-    font-weight: 900;
-    color: #141428;
-}
-label span {
-    justify-content: left;
-    position: relative;
-    font-size: 20px;
-    top: -17px;
+    
+    label {
+        margin: auto auto;
+        height: 48px;
+        span {
+            justify-content: left;
+            position: relative;
+            font-size: 20px;
+            top: -17px;
+            left: -16px;
+            &:first-of-type {
+                position: relative;
+                left: -51.5px;
+                top: -15.5px;
+                font-size: 32px;
+                font-weight: 900;
+                color: #141428;
+            }
+        }
+    }
+    input {
+        appearance: none;
+        background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
+        transition: --myColor1 0.5s, --myColor2 0.5s;
+        font-size: 24px;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 900;
+        border: none;
+        box-shadow: 3px 3px 3px 2px rgba(0,17,51);
+        border-radius: 32px;
+        color: #323264;
+        margin: 8px auto;
+        height: 32px;
+        width: 64px;
+        &:checked {
+            --myColor1: #ff9900;
+            --myColor2: #ff6000;
+            box-shadow: inset 0 0 5px rgba(0,17,51);
+            transition: --myColor1 0.5s, --myColor2 0.5s;
+        }
+        &:hover {
+            --myColor1: #ff9900;
+            --myColor2: #ff6000;
+            transition: --myColor1 0.5s, --myColor2 0.5s;
+        } 
+        &:active {
+            --myColor1: #ff5000;
+            --myColor2: #ff6000;
+            transition: --myColor1 0.1s, --myColor2 0.1s;
+        }  
+    }
 }
 
 @media screen and (max-width: 720px) {
     .checkInputs {
-        
-    }
-    .checkInputs label {
-        
-    }
-    .checkInputs input {
-
-    }
-    label {
-
-    }
-    label span:first-of-type {
-
-    }
-    label span {
-
+        label {
+            span {
+                font-size: 18px;
+                &:first-of-type {
+                    position: relative;
+                    left: -43px;
+                    top: -12px;
+                    font-size: 30px;
+                }
+            }
+        }
+        input {
+        height: 24px;
+        width: 48px;
+        }
     }
 }
 
-/*
 
-    .checkInputs {
-    
-    }
-    .checkInputs #toLowerCase {
-    
-    }
-    .checkInputs #toUpperCase {
-    
-    }
-    .checkInputs #toFirstLetter {
-    
-    }
-    .checkInputs #toParagraph {
-    
-    }
-*/
-
-
-
-
-
-@property --myColor1 {
-    syntax: '<color>';
-    initial-value: #ffaf00;
-    inherits: false;
-}
-@property --myColor2 {
-    syntax: '<color>';
-    initial-value: #ff7700;
-    inherits: false;
-}
 
 /* Submit button style*/
 #buttonSubmit {
     background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
-    transition: --myColor1 1s, --myColor2 1s;
+    transition: --myColor1 0.5s, --myColor2 0.5s;
     font-size: 24px;
     font-family: 'Source Code Pro', monospace;
     font-weight: 900;
@@ -244,20 +226,25 @@ label span {
     flex-direction: row;
     color: #323264;
     justify-content: center;
-    margin: 64px auto;
+    margin: 32px auto 64px auto;
     height: 64px;
     width: 128px;
-}    
-#buttonSubmit:hover {
-    --myColor1: #ff9900;
-    --myColor2: #ff6213;
-    transition: --myColor1 0.4s, --myColor2 0.4s;
+    &:hover {
+        --myColor1: #ff9900;
+        --myColor2: #ff6000;
+        transition: --myColor1 0.5s, --myColor2 0.5s;
+    } 
+    &:active {
+        --myColor1: #ff5000;
+        --myColor2: #ff6000;
+        transition: --myColor1 0.1s, --myColor2 0.1s;
+    }    
 }    
 
 @media screen and (max-width: 720px) {
     #buttonSubmit {
         font-size: 20px;
-        margin: 32px auto;
+        margin: 24px auto 32px auto;
         height: 48px;
         width: 96px;
     }
