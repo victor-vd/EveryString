@@ -21,6 +21,7 @@ const Check = {
     getToLowerCase: false,
     getToUpperCase: false,
     getToFirstLetter: false,
+    
     checkThis: function verifyChecked(name){
         if(name == 'checkboxCaps'){
             Check.getToLowerCase = document.querySelector(`input[id="getToLowerCase"`).checked;
@@ -52,7 +53,9 @@ function toFirstLetter(textBoxInput){
             wordNumber++;
         }
     }
+
     textBoxInput = '';
+
     for(let i=0; i<wordNumber; i++){
         strings[i] = strings[i].charAt(0).toUpperCase()+strings[i].slice(1);
         textBoxInput += i==wordNumber-1? strings[i]: strings[i] + ' ';

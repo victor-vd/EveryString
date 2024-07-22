@@ -72,6 +72,19 @@ body {
     }
 }
 
+.header{
+    margin: 32px auto auto 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 720px) {
+    .header{
+        margin: 16px auto auto 0px;
+    }
+}
+
 .toolLinks{
     display: flex;
     flex-direction: column;
@@ -92,7 +105,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 32px auto 0 auto;
+    margin: 16px auto 0 auto;
     height: fit-content;
     
     textarea {
@@ -124,7 +137,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 32px auto 8px auto;
+        margin: 8px auto 8px auto;
         width: 80%;
     }    
     .textBoxes #textBoxInput {
