@@ -17,6 +17,7 @@ const updateTextInput = {
         TEXT_BOX_OUTPUT.value = textCaptilizer(textBoxInput);
     }
 }
+
 const Check = {
     getToLowerCase: false,
     getToUpperCase: false,
@@ -68,33 +69,3 @@ function textInverter(textBoxInput){
     }   
     return outputText;
 }
-
-/*
-class Check{
-    constructor(name){
-        this.name = name
-    }
-    checkboxCaps = {
-        toLowerCase: value1,
-        toUpperCase: value2,
-        toFirstLetter: value3,
-        toParagraph: value4,
-    }
-    setCapsValues(value1, value2, value3, value4) {
-        checkboxCaps.toLowerCase = value1;
-        checkboxCaps.toUpperCase = value2;
-        checkboxCaps.toFirstLetter = value3;
-        checkboxCaps.toParagraph = value4;
-    }
-    verifyChecked(name){
-        if(name == 'checkboxCaps'){
-            setCapsValues(
-                document.querySelector(`input[id="toLowerCase"`).checked,
-                document.querySelector(`input[id="toUpperCase"`).checked,
-                document.querySelector(`input[id="toFirstLetter"`).checked,
-                document.querySelector(`input[id="toParagraph"`).checked
-            );
-        }
-    }
-}
-*/
