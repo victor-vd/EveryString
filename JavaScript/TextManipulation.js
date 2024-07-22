@@ -10,7 +10,6 @@ function buttonSubmitClick(){
 
 const updateTextInput = {
     getInvertedText: function(textBoxInput){
-        TEXT_BOX_OUTPUT.value = "";
         TEXT_BOX_OUTPUT.value = textInverter(textBoxInput);
     },
     getCaptalizedText: function(textBoxInput){
