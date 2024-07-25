@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+@mixin centralize($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+}
+@mixin linearGradOrange(){
+    background-image: $linear-g-orange;
+    background-size: 200%;
+    background-position: left;
+}

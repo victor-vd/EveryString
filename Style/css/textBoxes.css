@@ -1,0 +1,35 @@
+.textBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 16px auto 0 auto;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.textBoxes textarea {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffaf00;
+  text-align: left;
+  background-color: #323264;
+  border: inset;
+  min-height: 300px;
+  width: 90%;
+  max-width: 500px;
+  padding: 16px;
+  box-shadow: 3px 3px 5px 3px rgb(0, 17, 51);
+  border: 5px inset #ffaf00;
+  resize: none;
+}
+.textBoxes textarea:focus-visible {
+  outline: none;
+  border-color: #ff7700;
+  transition-duration: 0.3s;
+}
+.textBoxes #textBoxInput {
+  margin: 24px 16px 24px 64px;
+}
+.textBoxes #textBoxOutput {
+  margin: 24px 64px 24px 16px;
+}/*# sourceMappingURL=textBoxes.css.map */

@@ -1,0 +1,14 @@
+@import './importantImport.scss';
+
+.toolLinks{
+    @include centralize(column);
+    align-items: center;
+    margin: 64px auto 16px auto;
+    a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0px;
+    }
+}

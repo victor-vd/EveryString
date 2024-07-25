@@ -1,0 +1,27 @@
+@import './importantImport.scss';
+
+#buttonSubmit {
+    @include linearGradOrange();
+    transition: background-position 0.3s;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 900;
+    border: none;
+    box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    color: $bright-Purple;
+    justify-content: center;
+    margin: 32px auto 64px auto;
+    height: 64px;
+    width: 128px;
+    &:hover {
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+    &:active {
+        background-position: right;
+        transition-duration: 0.2s;
+    }
+}

@@ -1,0 +1,6 @@
+@import './importantImport.scss';
+
+.header{
+    margin: 32px auto auto 0px;
+    @include centralize(row);
+}

@@ -1,0 +1,17 @@
+$brighter-Orange: #ffaf00;
+$bright-Orange: #ff9900;
+$normal-Orange: #ff7700;
+$dark-Orange: #ff6000;
+$darker-Orange: #ff5000;
+$bright-Purple: #323264;
+$normal-Purple: #1e1e3c;
+$dark-Purple: #141428;
+
+$linear-g-orange: linear-gradient(
+    90deg, 
+    $brighter-Orange, 
+    $bright-Orange, 
+    $normal-Orange, 
+    $dark-Orange, 
+    $darker-Orange
+);

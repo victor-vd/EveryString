@@ -1,0 +1,32 @@
+@import './importantImport.scss';
+
+
+.textBoxes {
+    @include centralize(row);
+    margin: 16px auto 0 auto;
+    height: fit-content;
+    
+    textarea {
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 700;
+        color: $brighter-Orange;
+        text-align: left;
+        background-color: $bright-Purple;
+        border: inset;
+        min-height: 300px;
+        width: 90%;
+        max-width: 500px;
+        padding: 16px;
+        box-shadow: 3px 3px 5px 3px rgba(0,17,51);
+        border: 5px inset $brighter-Orange;   
+        resize: none;
+        &:focus-visible {
+            outline: none;
+            border-color: $normal-Orange;
+            transition-duration: 0.3s;
+        }
+    }
+    #textBoxInput { margin: 24px 16px 24px 64px; }    
+    #textBoxOutput { margin: 24px 64px 24px 16px; }    
+}

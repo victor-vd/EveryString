@@ -1,0 +1,68 @@
+@media screen and (max-width: 720px) {
+  #buttonSubmit {
+    font-size: 20px;
+    margin: 24px auto 32px auto;
+    height: 48px;
+    width: 96px;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .navbar {
+    height: 48px;
+  }
+  .navbar .links {
+    margin-left: 20px;
+    display: flex;
+  }
+  .navbar .links a {
+    margin-right: 20px;
+  }
+  .navbar img {
+    height: 36px;
+    margin: 6px 6px 6px 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .header {
+    margin: 16px auto auto 0px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .textBoxes {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto 8px auto;
+    width: 80%;
+  }
+  .textBoxes #textBoxInput {
+    margin: 8px auto;
+  }
+  .textBoxes #textBoxOutput {
+    margin: 8px auto;
+  }
+  .textBoxes textarea {
+    min-height: 160px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .checkInputs label span {
+    font-size: 18px;
+  }
+  .checkInputs label span:first-of-type {
+    position: relative;
+    left: -43px;
+    top: -12px;
+    font-size: 30px;
+  }
+  .checkInputs input {
+    height: 24px;
+    width: 48px;
+  }
+}/*# sourceMappingURL=portabilityMedium.css.map */
