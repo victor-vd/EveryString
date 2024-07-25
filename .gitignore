@@ -1,3 +1,3 @@
 ignoredByGit/
-*.css
-Style/
+Style/css/
+!main.css
