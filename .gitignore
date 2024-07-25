@@ -1,4 +1,4 @@
 ignoredByGit/
 
 Style/css/*.css
-Style/css/!main.css
+!Style/css/main.css
