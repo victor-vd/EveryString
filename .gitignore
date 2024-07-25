@@ -1,4 +1,3 @@
-1ignorar/
+ignoredByGit/
 *.css
-Style/css/*.css
-css/
+Style/
