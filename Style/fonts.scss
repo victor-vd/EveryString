@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-bold-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-bold-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-bold-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: normal;
 
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: italic;
 
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-italic-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-italic-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-italic-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 
@@ -45,8 +45,8 @@
 
 @font-face {    
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-medium-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-medium-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-medium-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-medium-webfont.woff') format('woff');
     font-weight: medium;
     font-style: normal;
 
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff') format('woff');
     font-weight: medium;
     font-style: italic;
 
@@ -63,40 +63,8 @@
 
 @font-face {
     font-family: 'jetbrains_mono';
-    src: url('../Assets/Fonts/jetbrainsmono-regular-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/jetbrainsmono-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'asapregular';
-    src: url('../Assets/Fonts/asap-variablefont_wdthwght-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/asap-variablefont_wdthwght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'asapitalic';
-    src: url('../Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'kanitmedium';
-    src: url('../Assets/Fonts/kanit-medium-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/kanit-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'kanitsemibold';
-    src: url('../Assets/Fonts/kanit-semibold-webfont.woff2') format('woff2'),
-         url('../Assets/Fonts/kanit-semibold-webfont.woff') format('woff');
+    src: url('../../Assets/Fonts/jetbrainsmono-regular-webfont.woff2') format('woff2'),
+         url('../../Assets/Fonts/jetbrainsmono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

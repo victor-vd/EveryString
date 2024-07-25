@@ -2,20 +2,25 @@
 
 #buttonSubmit {
     @include linearGradOrange();
+    @include centralize(row);
+    align-items: center;
     transition: background-position 0.3s;
     font-size: 24px;
     font-family: inherit;
-    font-weight: 900;
     border: none;
     box-shadow: 3px 3px 5px 3px rgba(0,17,51);
     border-radius: 32px;
     display: flex;
     flex-direction: row;
-    color: $bright-Purple;
+    color: $normal-Purple;
     justify-content: center;
     margin: 32px auto 64px auto;
     height: 64px;
     width: 128px;
+
+    span{
+        font-weight: bolder;
+    }
     &:hover {
         background-position: center;
         transition-duration: 0.2s;

@@ -62,19 +62,20 @@
 @media screen and (max-width: 720px) {
     .checkInputs {
         label {
+            margin: -4px auto;
             span {
-                font-size: 18px;
+                font-size: 20px;
                 &:first-of-type {
                     position: relative;
-                    left: -43px;
+                    left: -50px;
                     top: -12px;
-                    font-size: 30px;
+                    font-size: 38px;
                 }
             }
         }
         input {
-        height: 24px;
-        width: 48px;
+        height: 32px;
+        width: 56px;
         }
     }
 }

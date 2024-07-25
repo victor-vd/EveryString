@@ -1,1 +1,4 @@
-Style/
+1ignorar/
+*.css
+Style/css/*.css
+css/
