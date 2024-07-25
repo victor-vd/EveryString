@@ -2,3 +2,5 @@ ignoredByGit/
 
 Style/css/*.css
 Style/css/*.css.map
+!Style/css/main.css
+!Style/css/main.css.map
