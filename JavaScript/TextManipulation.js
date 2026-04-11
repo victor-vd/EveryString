@@ -5,7 +5,7 @@ let userText = "";
 let outputText = "";
 
 function buttonSubmitClick(){
-    console.log(Check.getToLowerCase, Check.getToUpperCase, Check.getToFirstLetter)
+    console.log(Check.getToLowerCase, Check.getToUpperCase, Check.getToFirstLetter, Check.getToLowerCase)
 }
 
 const updateTextInput = {
@@ -67,25 +67,39 @@ function toFirstLetter(textBoxInput){
     return textBoxInput;
 }
 
-function carteirinha(textBoxInput){
+function carteirinha(textBoxInput) {
     const text = textBoxInput;
 
-const nomes = [...text.matchAll(/Nome:\s*([A-ZÀ-Ü\s]+?)(?=\s+[A-ZÀ-Ü][a-z]|$)/g)]
-  .map(m => m[1].trim());
+    // pega todos os nomes
+    const nomes = [...text.matchAll(
+    /(?:Nome|N0me):\s*([A-ZÀ-Ü][A-ZÀ-Ü\s\n]+?)(?=\n\s*(?:Nome|N0me|Filia|Data|G[eê]nero|$))/gi
+)].map(m => m[1].replace(/\s+/g, ' ').trim());
+    console.log(nomes);
 
-// data de nascimento
-const nascimentoMatch = text.match(/Data de Nascimento:\s*([^\s]+)/i);
-const nascimento = nascimentoMatch ? nascimentoMatch[1] : null;
+    // data de nascimento (mais robusto)
+    const nascimentoMatch = text.match(/Data de Nascimento:\s*([\dIiSsOo\/]+)/i);
 
-const data = {
-  estudante: toFirstLetter(nomes[0]),
-  filiacao1: toFirstLetter(nomes[2]),
-  filiacao2: toFirstLetter(nomes[1]),
-  nascimento
-};
+    let nascimento = null;
+    if (nascimentoMatch) {
+        nascimento = nascimentoMatch[1]
+            .replace(/[iI]/g, "1")
+            .replace(/[oO]/g, "0")
+            .replace(/[sS]/g, "5");
+    }
 
-console.log(data);
- return `${data.estudante}\n${data.filiacao1}\n${data.filiacao2}\n${data.nascimento}`;
+    const data = {
+        estudante: toFirstLetter(nomes[0] || ""),
+        filiacao1: toFirstLetter(nomes[2] || ""),
+        filiacao2: toFirstLetter(nomes[1] || ""),
+        nascimento
+    };
+
+    console.log(data);
+
+    return `${data.estudante}
+${data.filiacao1}
+${data.filiacao2}
+${data.nascimento}`;
 }
 
 
