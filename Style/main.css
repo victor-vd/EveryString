@@ -98,13 +98,14 @@ body {
   flex-direction: column;
   margin: 16px 0px;
 }
-.carteira{
-  font-size: 32px !important;
-  min-height: 150px !important;
-  max-height: 150px !important;
+
+.carteira {
+  min-height: 150px;
+  max-height: 150px;
   white-space: nowrap !important;
   overflow-x: auto !important;
 }
+
 .textBoxes {
   display: flex;
   flex-direction: row;
@@ -115,13 +116,14 @@ body {
 }
 .textBoxes textarea {
   font-family: inherit;
-  font-size: 24px;
   font-weight: 700;
   color: #ffaf00;
   text-align: left;
   background-color: #323264;
   border: inset;
-  min-height: 300px;
+  min-height: 150px;
+  max-height: 150px;
+  font-size: 32px;
   width: 90%;
   max-width: 500px;
   padding: 16px;

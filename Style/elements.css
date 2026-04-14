@@ -1,51 +1,3 @@
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-bold-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-bold-webfont.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-bold-italic-webfont.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-extrabold-webfont.woff") format("woff");
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-extrabold-italic-webfont.woff") format("woff");
-  font-weight: bolder;
-  font-style: italic;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-italic-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-medium-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-medium-webfont.woff") format("woff");
-  font-weight: medium;
-  font-style: normal;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-medium-italic-webfont.woff") format("woff");
-  font-weight: medium;
-  font-style: italic;
-}
-@font-face {
-  font-family: "jetbrains_mono";
-  src: url("../../Assets/Fonts/jetbrainsmono-regular-webfont.woff2") format("woff2"), url("../../Assets/Fonts/jetbrainsmono-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   font-family: "jetbrains_mono";
   font-size: 24px;
@@ -98,13 +50,14 @@ body {
   flex-direction: column;
   margin: 16px 0px;
 }
-.carteira{
-  font-size: 32px !important;
-  min-height: 150px !important;
-  max-height: 150px !important;
+
+.carteira {
+  min-height: 150px;
+  max-height: 150px;
   white-space: nowrap !important;
   overflow-x: auto !important;
 }
+
 .textBoxes {
   display: flex;
   flex-direction: row;
@@ -115,13 +68,14 @@ body {
 }
 .textBoxes textarea {
   font-family: inherit;
-  font-size: 24px;
   font-weight: 700;
   color: #ffaf00;
   text-align: left;
   background-color: #323264;
   border: inset;
-  min-height: 300px;
+  min-height: 150px;
+  max-height: 150px;
+  font-size: 32px;
   width: 90%;
   max-width: 500px;
   padding: 16px;
@@ -230,76 +184,4 @@ body {
 #buttonSubmit:active {
   background-position: right;
   transition-duration: 0.2s;
-}
-
-@media screen and (max-width: 720px) {
-  #buttonSubmit {
-    font-size: 20px;
-    margin: 24px auto 32px auto;
-    height: 48px;
-    width: 96px;
-  }
-}
-@media screen and (max-width: 720px) {
-  body {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .navbar {
-    height: 48px;
-  }
-  .navbar .links {
-    margin-left: 20px;
-    display: flex;
-  }
-  .navbar .links a {
-    margin-right: 20px;
-  }
-  .navbar img {
-    height: 36px;
-    margin: 6px 6px 6px 16px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .header {
-    margin: 16px auto auto 0px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .textBoxes {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 8px auto 8px auto;
-    width: 80%;
-  }
-  .textBoxes #textBoxInput {
-    margin: 8px auto;
-  }
-  .textBoxes #textBoxOutput {
-    margin: 8px auto;
-  }
-  .textBoxes textarea {
-    min-height: 160px;
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .checkInputs label {
-    margin: -4px auto;
-  }
-  .checkInputs label span {
-    font-size: 20px;
-  }
-  .checkInputs label span:first-of-type {
-    position: relative;
-    left: -50px;
-    top: -12px;
-    font-size: 38px;
-  }
-  .checkInputs input {
-    height: 32px;
-    width: 56px;
-  }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=elements.css.map */

@@ -13,28 +13,29 @@
             Text Captilizer
         </h2>
     </div>
+    <div class="checkInputs">
+        <label class="getToLowerCase">
+            <input id="getToLowerCase"  type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
+            <span>×</span><span>LowerCase</span>
+        </label>
+        <label class="getToUpperCase">
+            <input id="getToUpperCase" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
+            <span>×</span><span>UpperCase</span>
+        </label>
+        <label class="getToFirstLetter">
+            <input id="getToFirstLetter" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
+            <span>×</span><span>FirstLetter</span>
+       </label>
+        <label class="getCarteirinha">
+            <input id="getCarteirinha" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
+            <span>×</span><span>Carteirinha</span>
+       </label>
+    </div>
     <div class="textBoxes">
         <textarea id="textBoxInput" oninput="updateTextInput.getCaptalizedText(value)" autofocus></textarea>
         <textarea readonly id="textBoxOutput"></textarea>
     </div>
-    <div class="checkInputs">
-        <label class="getToLowerCase">
-            <input id="getToLowerCase"  type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
-            <span>×</span><span>getToLowerCase</span>
-        </label>
-        <label class="getToUpperCase">
-            <input id="getToUpperCase" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
-            <span>×</span><span>getToUpperCase</span>
-        </label>
-        <label class="getToFirstLetter">
-            <input id="getToFirstLetter" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
-            <span>×</span><span>getToFirstLetter</span>
-       </label>
-        <label class="getCarteirinha">
-            <input id="getCarteirinha" type="radio" onchange="Check.checkThis(name)" name="checkboxCaps">
-            <span>×</span><span>getCarteirinha</span>
-       </label>
-    </div>
+    
 
     <div class="footer"></div>
     <button onclick="buttonSubmitClick()" id="buttonSubmit" value="Submit">
