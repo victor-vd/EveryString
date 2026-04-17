@@ -231,38 +231,65 @@ function toFirstLetter(text) {
         .join(' ');
 }
 
+function normalizeOCR(text) {
+    return text
+        .replace(/0/g, 'O')
+        .replace(/1/g, 'I')
+        .replace(/5/g, 'S')
+        .replace(/8/g, 'B')
+        .replace(/Ä|Â|À|Á/g, 'A')
+        .replace(/Ë|Ê|É/g, 'E')
+        .replace(/Ï|Í/g, 'I')
+        .replace(/Ö|Ô|Ó/g, 'O')
+        .replace(/Ü|Ú/g, 'U')
+        .replace(/Ç/g, 'C')
+        .replace(/DOME/g, 'NOME')
+        .replace(/\bOOS\b/g, 'DOS')
+        .replace(/\bOO\b/g, 'DO')
+        .replace(/\bOA\b/g, 'DA')
+        .replace(/\bOAS\b/g, 'DAS')
+}
+
 function corrigirNome(text) {
     const correcoes = {
-        'JOAO': 'JOÃO',
-        'JOÄO': 'JOÃO',
-        'CONCEICAO': 'CONCEIÇÃO',
-        'CONCEICÃO': 'CONCEIÇÃO',
-        'CONCEICÄO': 'CONCEIÇÃO',
-        'CONCEIÇÄO': 'CONCEIÇÃO',
-        'CONCEIÇAO': 'CONCEIÇÃO',
-        'GONCALVES': 'GONÇALVES',
-        'PAIXAO': 'PAIXÃO',
-        'BRANDAO': 'BRANDÃO',
-        'JOSE': 'JOSÉ',
-        'UMA': 'LIMA',
-        'ALMIRANOA': 'ALMIRANDA',
-        'SCARES': 'SOARES',
-        'SA': 'SÁ'
-    };
+    'MARTAIA': 'MARTA', // OCR adiciona Ietras
+    'FRANCISCO': 'FRANCISCO', 
+    'CARLCS': 'CARLOS',
+    'CARIOS': 'CARLOS', // L → I
+    'PAUIO': 'PAULO', // L minúscuIo estranho
+    'LUIS': 'LUÍS',
+    'LUiS': 'LUÍS',
+    'LUIZ': 'LUÍZ', // depende do padrão que você quer
+    'SILVA': 'SILVA',
+    'SILVA': 'SILVA', // I → I
+    'CLIVEIRA': 'OLIVEIRA',
+    'RODRIGUES': 'RODRIGUES',
+    'ALMEIDA': 'ALMEIDA',
+    'ALMEIDA': 'ALMEIDA',
+    'NCGUEIRA': 'NOGUEIRA',
+    'CCSTA': 'COSTA',
+    'SCUZA': 'SOUZA',
 
-    const resultado = text
-        .toUpperCase()
-        .replace(/0/g, 'O')
-        .replace(/OOS/g, 'DOS')
-        .replace(/A0/g, 'AO')
-        .replace(/I0/g, 'IO')
-        .replace(/N0ME|D0ME/g, 'NOME')
-        .replace(/AO\b/g, 'ÃO')
+    // cediIha
+    'GRACA': 'GRAÇA',
+    'PRISCIIA': 'PRISCILA',
+
+    // tiI (~)
+    'JCAO': 'JOAO',
+
+    // erros mais "sujos"
+    'ALEXANORE': 'ALEXANDRE',
+    'ALEXANDR3': 'ALEXANDRE',
+    'EDUAROO': 'EDUARDO',
+    'EDUARD0': 'EDUARDO',
+    'RICAROO': 'RICARDO'
+};
+    
+    const resultado = normalizeOCR(text.toUpperCase())
+        .replace(/\b[A-ZÀ-Ü]+\b/g, (palavra) => correcoes[palavra] || palavra)
         .replace(/CAO\b/g, 'ÇÃO')
-        .replace(/OO/g, 'Do')
-        .replace(/OA/g, 'Da')
-        .replace(/OAS/g, 'Das')
-        .replace(/\b[A-ZÀ-Ü]+\b/g, (palavra) => correcoes[palavra] || palavra);
+        .replace(/AO\b/g, 'ÃO')
+        
 
     console.log(resultado);
     return resultado;
