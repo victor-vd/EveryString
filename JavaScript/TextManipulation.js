@@ -86,9 +86,10 @@ console.log(text);
 
     for (const line of lines) {
         const normalizedLine = line
-            .replace(/[oO]/g, "0")
-            .replace(/[iI]/g, "1")
-            .replace(/[sS]/g, "5");
+                .replace(/[iI]/g, "1")
+                .replace(/[oO]/g, "0")
+                .replace(/[sS]/g, "5")
+                .replace(/[B]/g, '8');
 
         const matchDate = normalizedLine.match(/\d{2}\/\d{2}\/\d{4}/);
         
@@ -133,7 +134,8 @@ function extrairDadosNorm(text) {
             date = matchDate[1]
                 .replace(/[iI]/g, "1")
                 .replace(/[oO]/g, "0")
-                .replace(/[sS]/g, "5");
+                .replace(/[sS]/g, "5")
+                .replace(/[B]/g, '8');
 
             const [d, m, y] = date.split('/');
             date = `${d.padStart(2, '0')}/${m.padStart(2, '0')}/${y}`;
