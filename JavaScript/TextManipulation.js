@@ -148,7 +148,7 @@ function extrairDadosNorm(text) {
     }
 
     const nomes = text
-        .map(line => line.match(/(?:Nome|N0me|d0me|dome)\s*:\s*([A-ZÀ-Ü\s-]+)/i))
+        .map(line => line.match(/(?:Nome|N0me|0me|ome|d0me|dome)\s*:\s*([A-ZÀ-Ü\s-]+)/i))
         .filter(Boolean)
         .map(match => match[1]);
         
