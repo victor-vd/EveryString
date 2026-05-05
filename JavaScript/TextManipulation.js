@@ -129,7 +129,7 @@ function extrairDadosNorm(text) {
     for (const line of text) {
             console.log(line);
         const matchDate = line.match(
-                /(?:Data de Nascimento|Data|Nascimento)\s*:\s*([\dDIiSsOo]{1,2}\/[\dDIiSsOo]{1,2}\/[\dDIiSsOo]{4})/i
+                /(?:Data de Nascimento|Data|Nascimento)\s*:\s*([\dDbBIiSsOo]{1,2}\/[\dDbBIiSsOo]{1,2}\/[\dDbBIiSsOo]{4})/i
             );
         if (matchDate) {
             console.log(matchDate);
@@ -140,7 +140,7 @@ function extrairDadosNorm(text) {
                 .replace(/[sS]/g, "5")
                 .replace(/[D]/g, "0")
                 .replace(/00/g, "0000000")
-                .replace(/[B]/g, '8');
+                .replace(/[B]/g, "8");
 
             const [d, m, y] = date.split('/');
             date = `${d.padStart(2, '0')}/${m.padStart(2, '0')}/${y}`;
