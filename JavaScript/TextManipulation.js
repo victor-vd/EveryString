@@ -244,6 +244,8 @@ function normalizeOCR(text) {
         .replace(/1/g, 'I')
         .replace(/5/g, 'S')
         .replace(/8/g, 'B')
+        .replace(/\./g, ':')
+        .replace(/;/g, ':')
         .replace(/Ä|Â|À|Á/g, 'A')
         .replace(/Ë|Ê|É/g, 'E')
         .replace(/Ï|Í/g, 'I')
